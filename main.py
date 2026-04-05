@@ -9,7 +9,7 @@ def word_count(text):
 def main():
     book_path = "books/frankenstein.txt"
     text = get_book_text(book_path)
-    word_count = word_count(text)
-    print(f"Found {word_count} total words")
+    count = word_count(text)
+    print(f"Found {count} total words")
 
 main()
