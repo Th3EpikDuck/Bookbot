@@ -9,11 +9,29 @@ def get_book_text(filepath):
 def main():
     book_path = "books/frankenstein.txt"
     text = get_book_text(book_path)
-    count = get_num_words(text)
-    print(f"Found {count} total words")
+
+    print("============ BOOKBOT ============")
+    print(f"Analyzing book found at {book_path}...")
+
+    # word count
+    word_count = get_num_words(text)
+    print("----------- Word Count ----------")
+    print(f"Found {word_count} total words")
+
+    # character count
     char_count = get_char_count(text)
-    print(char_count)
-    sorted_chars = sort_chars(text)
-    print(sorted_chars)
+    sorted_chars = sort_chars(char_count)
+
+    print("--------- Character Count -------")
+    for item in sorted_chars:
+        char = item["char"]
+        num = item["num"]
+
+        if char.isalpha():
+            print(f"{char}: {num}")
+
+    print("============= END ===============")
+
+main()
     
 main()
