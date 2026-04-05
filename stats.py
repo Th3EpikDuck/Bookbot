@@ -12,7 +12,7 @@ def get_char_count(text):
             chars[lowered] = 1
     return chars
 
-def sorted_chars(text):
+def sort_chars(text):
     sorted_list = []
     for char, count in char_dict.items():
         sorted_list.append({"char": char, "num": count})
